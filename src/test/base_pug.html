@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
+  <head></head>
+  <body>
+    <!-- Propriedades adicionais-->
+    <th:block layout:fragment="properties"></th:block>
+    <!-- Sidebar-->
+    <th:block layout:fragment="sidebar">
+      <th:block th:replace="fragments/sidebar :: sidebar(currentPage='dashboard')"></th:block>
+    </th:block>
+    <!-- End Sidebar-->
+    <!-- Page title-->
+    <th:block layout:fragment="page_title">Painel Inicial</th:block>
+    <!-- Page Content-->
+    <th:block layout:fragment="page_content"></th:block>
+    <!-- End Page Content-->
+    <!-- Scripts adicionais-->
+    <th:block layout:fragment="optional"></th:block>
+  </body>
+</html>
